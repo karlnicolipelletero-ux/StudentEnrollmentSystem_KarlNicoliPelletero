@@ -1,40 +1,39 @@
-Student Enrollment System
-A Java Swing and MySQL application for student and course management.
+# Student Enrollment System
 
-Project Structure
-src/: Java source code (MainDashboard, EnrollmentListSystem, etc.).
+Java Swing application for student registration and course enrollment with MySQL.
 
-lib/: Database libraries (MySQL Connector).
+## Project Structure
 
-database/: SQL setup script and ERD diagram.
+* **src/**: Java source files.
+* **lib/**: MySQL JDBC Driver.
+* **database/**: SQL setup script and ERD.
+* **nbproject/**: NetBeans configuration.
 
-nbproject/: Project configuration files.
+---
 
-Database Setup
-Open MySQL Workbench.
+## Database Setup
 
-Go to File > Open SQL Script and select database_setup.sql.
+1. Open **MySQL Workbench**.
+2. Run `database_setup.sql` from the `database/` folder.
+3. Ensure `DBConnection.java` credentials match your local MySQL settings.
 
-Execute the script to create the schema and tables.
+---
 
-Verify that DBConnection.java matches your local MySQL username and password.
+## How to Run
 
-How to Run
-Via NetBeans
-Open the project folder in NetBeans.
+### Via NetBeans
+1. Open the project in NetBeans.
+2. Select **Run > Clean and Build Project**.
+3. Press **F6** to run.
 
-Select Run > Clean and Build Project.
+### Via JAR File
+1. Open the **dist/** folder.
+2. Keep the **lib/** folder in the same directory as the `.jar`.
+3. Launch `EnrollmentSystem.jar`.
 
-Press F6 to run.
+---
 
-Via JAR File
-Open the dist/ folder.
+## Relationships
 
-Ensure the lib/ folder is in the same directory.
-
-Run EnrollmentSystem.jar.
-
-Database Relationships
-Student to Enrollment: One-to-Many. One student can have multiple enrollment entries.
-
-Course to Enrollment: One-to-Many. One course can be assigned to multiple students.
+* **Student to Enrollment**: One-to-Many.
+* **Course to Enrollment**: One-to-Many.
